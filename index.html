@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tendencia Informativa | Noticias Reales</title>
+    <!-- Iconos profesionales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+    <style>
+        /* CONFIGURACIÓN GENERAL */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial Black', sans-serif; }
+        body { background-color: #000; color: #fff; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+        /* CABECERA (NEGRO Y ROJO) */
+        header { background-color: #000; border-bottom: 5px solid #ff0000; padding: 20px 0; position: sticky; top: 0; z-index: 1000; }
+        .top-nav { max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        
+        /* ESTO PONE EL LOGO AL LADO DEL NOMBRE */
+        .logo-box { display: flex; align-items: center; gap: 15px; }
+        .logo-img { height: 50px; width: auto; border-radius: 4px; }
+        .logo-text { font-size: 28px; font-weight: 900; letter-spacing: -1px; text-transform: uppercase; }
+        .logo-text span { color: #ff0000; }
+        
+        /* ICONOS REDES SOCIALES */
+        .social-icons a { font-size: 26px; margin-left: 15px; }
+        .fa-whatsapp { color: #25d366; }
+        .fa-tiktok { color: #fff; }
+        .fa-tiktok:hover { color: #ff0050; }
+
+        /* MENÚ DE CATEGORÍAS */
+        nav { background: #1a1a1a; padding: 12px 0; border-bottom: 1px solid #333; }
+        nav ul { display: flex; justify-content: center; list-style: none; flex-wrap: wrap; }
+        nav li { margin: 5px 15px; }
+        nav a { color: #fff; font-size: 13px; text-transform: uppercase; font-weight: bold; }
+        nav a:hover { color: #ff0000; }
+
+        /* CONTENEDOR DE NOTICIAS */
+        .container { max-width: 1200px; margin: 20px auto; padding: 0 20px; }
+
+        /* NOTICIA PRINCIPAL */
+        .main-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+        .featured-article { position: relative; background: #111; border-radius: 5px; overflow: hidden; border-bottom: 5px solid #ff0000; }
+        .featured-article img { width: 100%; height: 450px; object-fit: cover; opacity: 0.7; }
+        .featured-info { position: absolute; bottom: 0; padding: 30px; background: linear-gradient(transparent, #000); width: 100%; }
+        .tag { background: #ff0000; color: #fff; padding: 5px 12px; font-size: 12px; font-weight: bold; margin-bottom: 10px; display: inline-block; }
+
+        /* SECCIONES SECUNDARIAS */
+        .section-title { border-left: 5px solid #ff0000; padding-left: 10px; margin: 30px 0 15px; text-transform: uppercase; font-size: 20px; color: #ff0000; }
+        .grid-news { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .news-card { background: #1a1a1a; padding: 20px; border-radius: 5px; border-top: 3px solid #ff0000; }
+        .news-card h3 { font-size: 18px; margin-bottom: 10px; }
+
+        /* FOOTER */
+        footer { background: #111; text-align: center; padding: 40px; border-top: 5px solid #ff0000; margin-top: 50px; }
+
+        /* ADAPTACIÓN A CELULARES */
+        @media (max-width: 768px) {
+            .main-grid { grid-template-columns: 1fr; }
+            .logo-box { flex-direction: column; text-align: center; }
+            .top-nav { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="top-nav">
+            <!-- LOGO + NOMBRE -->
+            <div class="logo-box">
+                <img src="logo.png" alt="Logo" class="logo-img">
+                <div class="logo-text">TENDENCIA <span>INFORMATIVA</span></div>
+            </div>
+            <!-- REDES SOCIALES -->
+            <div class="social-icons">
+                <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#nacionales">Nacionales</a></li>
+            <li><a href="#internacionales">Internacionales</a></li>
+            <li><a href="#deportes">Deportes</a></li>
+            <li><a href="#farandula">Farándula</a></li>
+            <li><a href="#comunidad">Comunidad</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <div class="main-grid">
+            <!-- NOTICIA DESTACADA -->
+            <article class="featured-article" id="nacionales">
+                <img src="https://images.unsplash.com" alt="Noticia Principal">
+                <div class="featured-info">
+                    <span class="tag">NACIONALES</span>
+                    <h2>Gran titular de impacto: Lo último en Tendencia Informativa</h2>
+                    <p>Mantente al día con los sucesos más importantes que ocurren en el país hoy.</p>
+                </div>
+            </article>
+
+            <!-- BARRA LATERAL INTERNACIONAL -->
+            <aside id="internacionales">
+                <div class="section-title">Internacionales</div>
+                <div class="news-card">
+                    <span class="tag">MUNDO</span>
+                    <h3>Sucesos que cambian el panorama global hoy</h3>
+                </div>
+                <br>
+                <div class="news-card">
+                    <span class="tag">TECNOLOGÍA</span>
+                    <h3>Avances digitales que debes conocer este 2026</h3>
+                </div>
+            </aside>
+        </div>
+
+        <!-- OTRAS SECCIONES -->
+        <div class="section-title">Otras categorías</div>
+        <div class="grid-news">
+            <article class="news-card" id="deportes">
+                <h3 style="color: #ff0000;"><i class="fas fa-trophy"></i> DEPORTES</h3>
+                <p>Resultados deportivos y noticias de tus equipos favoritos.</p>
+            </article>
+            <article class="news-card" id="farandula">
+                <h3 style="color: #ff0000;"><i class="fas fa-star"></i> FARÁNDULA</h3>
+                <p>El mundo del espectáculo y los chismes más calientes del momento.</p>
+            </article>
+            <article class="news-card" id="comunidad">
+                <h3 style="color: #ff0000;"><i class="fas fa-users"></i> COMUNIDAD</h3>
+                <p>Tu voz cuenta: denuncias y noticias locales de tu comunidad.</p>
+            </article>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="logo-text">TENDENCIA <span>INFORMATIVA</span></div>
+        <p>Tendencia Informativa... Tu Alternativa Digital..</p>
+        <p>&copy; 2026 - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
